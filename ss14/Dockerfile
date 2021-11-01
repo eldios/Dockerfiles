@@ -11,8 +11,8 @@ FROM alpine AS server
 
 COPY --from="build" /ss14/SS14.Watchdog/bin/Release/netcoreapp3.1/linux-x64/publish/ ss14
 
-PORT ["1212/tcp"]
-PORT ["1212/udp"]
+EXPOSE ["1212/tcp"]
+EXPOSE ["1212/udp"]
 
 VOLUME ["/data"] 
 
