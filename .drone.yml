@@ -1,6 +1,8 @@
 ---
 kind: pipeline
 type: kubernetes
+name: ss14
+
 
 # resource requests are defined on the pipeline level
 resources:
@@ -8,8 +10,25 @@ resources:
     cpu: 500
     memory: 250MiB
 
+platform:
+  os: linux
+  arch: amd64
+
 steps:
-  - name: en
-    image: alpine
-    commands:
-      - echo hello
+- name: publish
+  image: plugins/docker
+  settings:
+    dockerfile: ss14/Dockerfile
+    repo: eldios/ss14-server
+    auto_tag: "true"
+    username:
+      from_secret: DOCKER_USERNAME
+    password:
+      from_secret: DOCKER_PASSWORD
+  tags:
+    - latest
+    - 0.0.1
+
+trigger:
+  branch: [ master ]
+  event: [push, tag]
