@@ -19,7 +19,7 @@ EXPOSE "1212/udp"
 EXPOSE "5000/tcp"
 EXPOSE "5000/udp"
 
-VOLUME [ "/data" ] 
+VOLUME [ "/ss14/instances" ] 
 
 ADD ss14/appsettings.yml /ss14/appsettings.yml
 
