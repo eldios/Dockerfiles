@@ -30,4 +30,4 @@ steps:
 
 trigger:
   branch: [ master ]
-  event:  [ push, tag ]
+  event:  [ tag ]
