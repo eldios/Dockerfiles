@@ -4,5 +4,3 @@ This image runs the [Official Watchdog](https://github.com/space-wizards/SS14.Wa
 Dedicated Server entirely in one container.
 
 [Docker Hub page](https://hub.docker.com/repository/docker/eldios/ss14-server)
-
-# Setup
