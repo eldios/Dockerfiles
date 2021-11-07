@@ -21,7 +21,7 @@ EXPOSE "5000/udp"
 
 VOLUME [ "/data" ] 
 
-RUN cat <<EOF >/ss14/appsettings.yml
+COPY <<EOF /ss14/appsettings.yml
 Logging:
   LogLevel:
     Default: "Information"
