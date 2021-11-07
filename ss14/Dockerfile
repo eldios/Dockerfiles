@@ -21,6 +21,6 @@ EXPOSE "5000/udp"
 
 VOLUME [ "/data" ] 
 
-ADD appsettings.yml /ss14/appsettings.yml
+ADD ss14/appsettings.yml /ss14/appsettings.yml
 
 CMD cd /ss14 && /ss14/SS14.Watchdog
