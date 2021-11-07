@@ -5,6 +5,23 @@ Logging:
     Microsoft.Hosting.Lifetime: "Information"
     SS14: "Debug"
 
+Serilog:
+  Using: [ "Serilog.Sinks.Console" ]
+  MinimumLevel:
+    Default: Information
+    Override:
+      SS14: Information
+      Microsoft: "Warning"
+      Microsoft.Hosting.Lifetime: "Information"
+      Microsoft.AspNetCore: Warning
+
+  WriteTo:
+    - Name: Console
+      Args:
+        OutputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3} {SourceContext}] {Message:lj}{NewLine}{Exception}"
+
+  Enrich: [ "FromLogContext" ]
+
 AllowedHosts: "*"
 
 # API URL your watchdog is accessible from.
