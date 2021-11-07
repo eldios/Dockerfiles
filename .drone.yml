@@ -13,18 +13,3 @@ steps:
     image: alpine
     commands:
       - echo hello
-    resources:
-      # resource limits are defined for each step
-      limit:
-        cpu: 100
-        memory: 100MiB
-
-  - name: es
-    image: alpine
-    commands:
-      - echo hola
-
-  - name: fr
-    image: alpine
-    commands:
-      - echo bonjour
