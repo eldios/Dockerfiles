@@ -20,7 +20,6 @@ steps:
   settings:
     dockerfile: ss14/Dockerfile
     repo: eldios/ss14-server
-    auto_tag: "true"
     username:
       from_secret: DOCKER_USERNAME
     password:
