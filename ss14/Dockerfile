@@ -46,7 +46,7 @@ RUN echo '      # Name of the server'                    >> /ss14/appsettings.ym
 RUN echo '      Name: "Test Instance"'                   >> /ss14/appsettings.yml
 RUN echo '      # Token to control the instance remotely'>> /ss14/appsettings.yml
 RUN echo '      ApiToken: "foobar"'                      >> /ss14/appsettings.yml
-RUN echo '      # Port OF THE GAME SERVER. 
+RUN echo '      # Port OF THE GAME SERVER.'              >> /ss14/appsettings.yml
 RUN echo '      # This should match the HTTP status API' >> /ss14/appsettings.yml
 RUN echo '      # or watchdog can't contact the server.' >> /ss14/appsettings.yml
 RUN echo '      ApiPort: 1212'                           >> /ss14/appsettings.yml
