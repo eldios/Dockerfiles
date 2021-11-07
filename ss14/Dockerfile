@@ -5,7 +5,7 @@ ADD /ss14 /ss14
 
 WORKDIR /ss14
 
-RUN dotnet publish -c Release -r linux-x64 --no-self-contained
+RUN cd /ss14 && dotnet publish -c Release -r linux-x64 --no-self-contained
 
 FROM alpine AS server
 
