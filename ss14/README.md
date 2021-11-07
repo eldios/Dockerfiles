@@ -4,3 +4,4 @@ This image runs the [Official Watchdog](https://github.com/space-wizards/SS14.Wa
 Dedicated Server entirely in one container.
 
 # Setup
+
