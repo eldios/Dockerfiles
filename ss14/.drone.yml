@@ -1,0 +1,9 @@
+kind: pipeline
+name: test-drone
+type: docker
+
+steps:
+  - name: test
+    image: busybox
+    commands:
+      - echo test
