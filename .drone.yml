@@ -1,9 +1,30 @@
+---
 kind: pipeline
-name: test-drone
-type: docker
+type: kubernetes
+
+# resource requests are defined on the pipeline level
+resources:
+  request:
+    cpu: 500
+    memory: 250MiB
 
 steps:
-  - name: test
-    image: busybox
+  - name: en
+    image: alpine
     commands:
-      - echo test
+      - echo hello
+    resources:
+      # resource limits are defined for each step
+      limit:
+        cpu: 100
+        memory: 100MiB
+
+  - name: es
+    image: alpine
+    commands:
+      - echo hola
+
+  - name: fr
+    image: alpine
+    commands:
+      - echo bonjour
