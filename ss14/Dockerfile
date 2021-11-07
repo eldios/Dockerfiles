@@ -23,6 +23,6 @@ VOLUME [ "/ss14/instances" ]
 
 ADD ss14/appsettings.yml /ss14/appsettings.yml
 
-RUN apt-get install ca-certificates
+RUN apt update && apt install ca-certificates
 
 CMD cd /ss14 && /ss14/SS14.Watchdog
