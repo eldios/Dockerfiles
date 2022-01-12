@@ -1,7 +1,7 @@
 # based on https://docs.spacestation14.io/getting-started/hosting
 
 # BUILD
-FROM bitnami/dotnet-sdk:5 AS build
+FROM bitnami/dotnet-sdk:6 AS build
 
 ADD https://github.com/space-wizards/SS14.Watchdog/archive/refs/heads/master.zip /tmp/
 
@@ -10,7 +10,7 @@ RUN unzip /tmp/master.zip -d /tmp/ && mv /tmp/SS14.Watchdog-master/SS14.Watchdog
 RUN cd /ss14 && dotnet publish -c Release -r linux-x64 --self-contained true /ss14
 
 # SERVER
-FROM bitnami/dotnet:5 AS server
+FROM bitnami/dotnet:6 AS server
 
 # https://github.com/dotnet/core/issues/2186
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT 1

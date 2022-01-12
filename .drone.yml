@@ -26,7 +26,7 @@ steps:
       from_secret: DOCKER_PASSWORD
     tags:
       - latest
-      - '1.0.0'
+      - '2.0.0'
 
 trigger:
   branch: [ master ]
